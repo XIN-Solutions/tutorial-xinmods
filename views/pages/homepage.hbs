@@ -1,0 +1,22 @@
+{{!< default }}
+
+{{#contentFor "title"}}Homepage{{/contentFor}}
+
+<h1>Homepage</h1>
+
+<p>An overview of the latest articles.</p>
+
+<div class="ArticleList">
+	{{#each articles as |article|}}
+
+		<div class="card">
+			<img src="{{article.thumbnail}}" class="card-img-top">
+			<div class="card-body">
+				<h5 class="card-title">{{article.title}}</h5>
+				<p class="card-text">{{article.description}}</p>
+				<a href="{{article.url}}" class="btn btn-primary">Read Article &raquo;</a>
+			</div>
+		</div>
+
+	{{/each}}
+</div>

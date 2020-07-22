@@ -1,0 +1,21 @@
+.ArticleList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.ArticleList .card {
+    width: calc(33% - 20px);
+    margin: 10px;
+}
+
+.Article__Image {
+    margin: 20px;
+    margin-top: 40px;
+    box-shadow: 0 0 15px #aaa;
+}
+
+.Article__ImageCaption {
+    text-align: center;
+    font-family: "Courier New", monospace;
+}
