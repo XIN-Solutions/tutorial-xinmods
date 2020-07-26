@@ -11,9 +11,14 @@ module.exports = {
 	 * @returns {Promise<void>}
 	 */
 	async index(req, resp) {
-		resp.render("article", {
-			article: await Articles.getArticle(req.params.page)
-		});
+		try {
+			resp.render("article", {
+				article: await Articles.getArticle(req.params.page)
+			});
+		}
+		catch (ex) {
+			resp.status(500).send(ex);
+		}
 	}
 	
 }
